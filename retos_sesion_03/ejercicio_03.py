@@ -1,0 +1,1 @@
+#hacer un tutorial de como se barre una habitacion
