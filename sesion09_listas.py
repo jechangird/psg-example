@@ -25,8 +25,26 @@ mi_lista = list(mi_tupla)
 print (mi_lista)
 
 print ("Lista por comprensión")
+#nueva_lista = [expresion for elemento in iterable if condicion]
+#condicion: es una expresión booleana que determina si se incluye 
+# o no el elemento en la nueva lista.
 mi_lista = [x for x in range(10)]
 print (mi_lista)
+
+numeros = [1, 2, 3, 4, 5]
+cuadrados = [numero**2 for numero in numeros]
+print(cuadrados)  # Salida: [1, 4, 9, 16, 25]
+
+numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+numeros_pares = [numero for numero in numeros if numero % 2 == 0]
+print(numeros_pares)  # Salida: [2, 4, 6, 8, 10]
+
+# Comprensión de lista para obtener la longitud de cada nombre
+nombres = ["Alice", "Bob", "Charlie", "David"]
+longitudes = [len(nombre) for nombre in nombres]
+# Resultado: [5, 3, 7, 5]
+print(longitudes)
+
 
 print ("Indexación positivo de una lista")
 lista = [1, "hola", 3.14, (1,2)]
@@ -181,6 +199,23 @@ lista = [3,1,5,2,4]
 print (lista)
 lista.reverse()
 print (lista)
+
+#Es importante destacar que reverse() no crea una nueva lista, 
+# sino que modifica la lista original. Si deseas conservar la lista 
+# original y obtener una nueva lista invertida, puedes utilizar 
+# la función reversed(), que devuelve un iterador, y luego convertir 
+# ese iterador en una lista:
+
+mi_lista = [1, 2, 3, 4, 5]
+
+# Obtener una nueva lista invertida
+nueva_lista_invertida = list(reversed(mi_lista))
+
+# La lista original no se modifica
+print(mi_lista)  # Output: [1, 2, 3, 4, 5]
+
+# La nueva lista contiene los elementos en orden inverso
+print(nueva_lista_invertida)  # Output: [5, 4, 3, 2, 1]
 
 #Metodos de copia
 #Cuando se asigna una lista a otra variable se crea una referencia 
